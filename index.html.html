@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luize Mourele | Depilação a Laser</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #f8f3ee;
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #5a4633;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+      background: #f8f3ee;
+    }
+    .promo-img {
+      max-width: 350px;
+      width: 90%;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(90,70,51,0.08);
+      margin: 2rem auto 1.5rem auto;
+      display: block;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #4a3722;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #7a6a58;
+    }
+    .section {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px rgba(90,70,51,0.06);
+      padding: 2rem 1.5rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #4a3722;
+      text-align: center;
+    }
+    .pricing-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem 0;
+      font-size: 1.1rem;
+    }
+    .pricing-list li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+      padding: 0.7rem 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .pricing-list li:last-child {
+      border-bottom: none;
+    }
+    .appointment-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .appointment-form label {
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+    .appointment-form input, .appointment-form select, .appointment-form textarea {
+      padding: 0.7rem;
+      border: 1px solid #d6cfc7;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #faf7f3;
+      font-family: inherit;
+    }
+    .appointment-form button {
+      background: #bfa07a;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 0.9rem;
+      font-size: 1.1rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .appointment-form button:hover {
+      background: #a88a6a;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: #e9dfd3;
+      color: #7a6a58;
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      .section {
+        padding: 1.2rem 0.5rem;
+      }
+      .promo-img {
+        margin: 1.2rem auto 1rem auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Luize Mourele</h1>
+    <div class="subtitle">Depilação permanente a laser com Braun Silk Expert Pro 5</div>
+    <img src="download.png" alt="Promoção Luize Mourele" class="promo-img">
+  </header>
+
+  <section class="section">
+    <div class="section-title">Tabela de Preços</div>
+    <ul class="pricing-list">
+      <li><span>Zona Facial completa</span> <span>15€</span></li>
+      <li><span>Peitoral, abdômen e costas</span> <span>30€</span></li>
+      <li><span>Pernas</span> <span>20€</span></li>
+      <li><span>Zonas íntimas</span> <span>30€</span></li>
+    </ul>
+    <div style="text-align:center; color:#7a6a58; font-size:1rem;">
+      Atendimento em domicílio &nbsp;|&nbsp; Treinamento e certificação
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">Agende seu horário</div>
+    <form class="appointment-form" onsubmit="event.preventDefault(); alert('Sua solicitação foi enviada! Entraremos em contato pelo WhatsApp.');">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">WhatsApp</label>
+      <input type="tel" id="phone" name="phone" placeholder="Ex: 937069915" required>
+
+      <label for="service">Serviço</label>
+      <select id="service" name="service" required>
+        <option value="">Selecione</option>
+        <option>Zona Facial completa</option>
+        <option>Peitoral, abdômen e costas</option>
+        <option>Pernas</option>
+        <option>Zonas íntimas</option>
+      </select>
+
+      <label for="date">Data preferida</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="message">Mensagem (opcional)</label>
+      <textarea id="message" name="message" rows="2" placeholder="Alguma observação?"></textarea>
+
+      <button type="submit">Agendar</button>
+    </form>
+    <div style="text-align:center; margin-top:1.2rem; color:#bfa07a;">
+      Ou agende diretamente pelo WhatsApp: <a href="https://wa.me/351937069915" style="color:#a88a6a; text-decoration:underline;">937069915</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Luize Mourele | Depilação permanente a laser com Braun Silk Expert Pro 5
+  </footer>
+</body>
+</html>
