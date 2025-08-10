@@ -1,177 +1,224 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Luize Mourele | Depilação a Laser</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: #f8f3ee;
-      font-family: 'Montserrat', Arial, sans-serif;
-      color: #5a4633;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      text-align: center;
-      padding: 2rem 1rem 1rem 1rem;
-      background: #f8f3ee;
-    }
-    .promo-img {
-      max-width: 350px;
-      width: 90%;
-      border-radius: 18px;
-      box-shadow: 0 4px 24px rgba(90,70,51,0.08);
-      margin: 2rem auto 1.5rem auto;
-      display: block;
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      color: #4a3722;
-    }
-    .subtitle {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: #7a6a58;
-    }
-    .section {
-      max-width: 600px;
-      margin: 2rem auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 2px 16px rgba(90,70,51,0.06);
-      padding: 2rem 1.5rem;
-    }
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #4a3722;
-      text-align: center;
-    }
-    .pricing-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 1.5rem 0;
-      font-size: 1.1rem;
-    }
-    .pricing-list li {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #eee;
-      padding: 0.7rem 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-    }
-    .pricing-list li:last-child {
-      border-bottom: none;
-    }
-    .appointment-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    .appointment-form label {
-      font-weight: 500;
-      margin-bottom: 0.3rem;
-    }
-    .appointment-form input, .appointment-form select, .appointment-form textarea {
-      padding: 0.7rem;
-      border: 1px solid #d6cfc7;
-      border-radius: 8px;
-      font-size: 1rem;
-      background: #faf7f3;
-      font-family: inherit;
-    }
-    .appointment-form button {
-      background: #bfa07a;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 0.9rem;
-      font-size: 1.1rem;
-      font-family: 'Montserrat', Arial, sans-serif;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .appointment-form button:hover {
-      background: #a88a6a;
-    }
-    footer {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      background: #e9dfd3;
-      color: #7a6a58;
-      font-size: 1rem;
-      margin-top: 2rem;
-    }
-    @media (max-width: 600px) {
-      .section {
-        padding: 1.2rem 0.5rem;
-      }
-      .promo-img {
-        margin: 1.2rem auto 1rem auto;
-      }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Depilação a Laser - Sua Clínica</title>
+    <style>
+        /* Reset & base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fefefe;
+            color: #333;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+        a {
+            color: #d6336c;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover,
+        a:focus {
+            color: #b02a5c;
+            outline: none;
+        }
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 15px 40px;
+        }
+        header {
+            background-color: #fff7f9;
+            padding: 25px 15px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            animation: fadeInDown 0.8s ease forwards;
+        }
+        header h1 {
+            color: #d6336c;
+            font-size: 2.2rem;
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            font-weight: 500;
+        }
+        section {
+            margin-top: 40px;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        section h2 {
+            color: #d6336c;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+        }
+        /* Pricing grid */
+        .precos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 25px 15px;
+            text-align: center;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 8px rgba(214, 51, 108, 0.07);
+            cursor: default;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover,
+        .card:focus-within {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 24px rgba(214, 51, 108, 0.18);
+            outline: none;
+        }
+        .card h3 {
+            color: #d6336c;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .card p {
+            color: #444;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        /* Agenda section */
+        .agenda {
+            background: #fff7f9;
+            border-radius: 12px;
+            padding: 30px 20px;
+            box-shadow: 0 3px 12px rgba(214, 51, 108, 0.15);
+            max-width: 700px;
+            margin: 40px auto 0;
+            text-align: center;
+        }
+        .agenda p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #555;
+            font-weight: 500;
+        }
+        /* Calendly iframe container */
+        .calendly-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 90%; /* aspect ratio for mobiles */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(214, 51, 108, 0.25);
+            transition: box-shadow 0.3s ease;
+        }
+        .calendly-container:hover,
+        .calendly-container:focus-within {
+            box-shadow: 0 12px 32px rgba(214, 51, 108, 0.38);
+            outline: none;
+        }
+        .calendly-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #d6336c;
+            color: white;
+            padding: 18px 15px;
+            margin-top: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            user-select: none;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        /* Animations */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Luize Mourele</h1>
-    <div class="subtitle">Depilação permanente a laser com Braun Silk Expert Pro 5</div>
-    <img src="download.png" alt="Promoção Luize Mourele" class="promo-img">
-  </header>
 
-  <section class="section">
-    <div class="section-title">Tabela de Preços</div>
-    <ul class="pricing-list">
-      <li><span>Zona Facial completa</span> <span>15€</span></li>
-      <li><span>Peitoral, abdômen e costas</span> <span>30€</span></li>
-      <li><span>Pernas</span> <span>20€</span></li>
-      <li><span>Zonas íntimas</span> <span>30€</span></li>
-    </ul>
-    <div style="text-align:center; color:#7a6a58; font-size:1rem;">
-      Atendimento em domicílio &nbsp;|&nbsp; Treinamento e certificação
+    <header>
+        <h1>✨ Depilação a Laser - Sua Clínica</h1>
+        <p>Tratamento seguro, confortável e resultados visíveis desde a primeira sessão.</p>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <h2>💎 Nossos Serviços e Preços</h2>
+            <div class="precos">
+                <div class="card" tabindex="0">
+                    <h3>Zona Facial Completa</h3>
+                    <p><strong>15€</strong></p>
+                </div>
+                <div class="card" tabindex="0">
+                    <h3>Peitoral, Abdômen e Costas</h3>
+                    <p><strong>30€</strong></p>
+                </div>
+                <div class="card" tabindex="0">
+                    <h3>Pernas</h3>
+                    <p><strong>20€</strong></p>
+                </div>
+                <div class="card" tabindex="0">
+                    <h3>Zonas Íntimas</h3>
+                    <p><strong>30€ - 50€</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="agenda">
+            <h2>📅 Agende seu Horário</h2>
+            <p>Escolha o melhor dia e horário para você usando nosso calendário abaixo.</p>
+
+            <div class="calendly-container" tabindex="0" aria-label="Calendário de agendamento">
+                <iframe src="https://calendly.com/luizvieira1401/30min" allowfullscreen></iframe>
+            </div>
+        </section>
+
     </div>
-  </section>
 
-  <section class="section">
-    <div class="section-title">Agende seu horário</div>
-    <form class="appointment-form" onsubmit="event.preventDefault(); alert('Sua solicitação foi enviada! Entraremos em contato pelo WhatsApp.');">
-      <label for="name">Nome</label>
-      <input type="text" id="name" name="name" required>
+    <footer>
+        <p>&copy; 2025 - Sua Clínica de Depilação a Laser</p>
+    </footer>
 
-      <label for="phone">WhatsApp</label>
-      <input type="tel" id="phone" name="phone" placeholder="Ex: 937069915" required>
-
-      <label for="service">Serviço</label>
-      <select id="service" name="service" required>
-        <option value="">Selecione</option>
-        <option>Zona Facial completa</option>
-        <option>Peitoral, abdômen e costas</option>
-        <option>Pernas</option>
-        <option>Zonas íntimas</option>
-      </select>
-
-      <label for="date">Data preferida</label>
-      <input type="date" id="date" name="date" required>
-
-      <label for="message">Mensagem (opcional)</label>
-      <textarea id="message" name="message" rows="2" placeholder="Alguma observação?"></textarea>
-
-      <button type="submit">Agendar</button>
-    </form>
-    <div style="text-align:center; margin-top:1.2rem; color:#bfa07a;">
-      Ou agende diretamente pelo WhatsApp: <a href="https://wa.me/351937069915" style="color:#a88a6a; text-decoration:underline;">937069915</a>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Luize Mourele | Depilação permanente a laser com Braun Silk Expert Pro 5
-  </footer>
 </body>
 </html>
